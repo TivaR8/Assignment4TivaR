@@ -59,7 +59,7 @@
             // lblIntroQ
             // 
             this.lblIntroQ.AutoSize = true;
-            this.lblIntroQ.Location = new System.Drawing.Point(142, 41);
+            this.lblIntroQ.Location = new System.Drawing.Point(135, 34);
             this.lblIntroQ.Name = "lblIntroQ";
             this.lblIntroQ.Size = new System.Drawing.Size(262, 13);
             this.lblIntroQ.TabIndex = 0;
