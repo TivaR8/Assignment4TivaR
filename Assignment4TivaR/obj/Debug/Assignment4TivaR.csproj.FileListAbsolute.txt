@@ -1,0 +1,9 @@
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment4TivaR\Assignment4TivaR\bin\Debug\Assignment4TivaR.exe.config
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment4TivaR\Assignment4TivaR\bin\Debug\Assignment4TivaR.exe
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment4TivaR\Assignment4TivaR\bin\Debug\Assignment4TivaR.pdb
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment4TivaR\Assignment4TivaR\obj\Debug\Assignment4TivaR.csprojResolveAssemblyReference.cache
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment4TivaR\Assignment4TivaR\obj\Debug\Assignment4TivaR.Assignment4Form.resources
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment4TivaR\Assignment4TivaR\obj\Debug\Assignment4TivaR.Properties.Resources.resources
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment4TivaR\Assignment4TivaR\obj\Debug\Assignment4TivaR.csproj.GenerateResource.Cache
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment4TivaR\Assignment4TivaR\obj\Debug\Assignment4TivaR.exe
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Rait, Tiva (s230816)\Assignments\Assignment4TivaR\Assignment4TivaR\obj\Debug\Assignment4TivaR.pdb
