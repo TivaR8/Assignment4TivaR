@@ -34,9 +34,12 @@ namespace Assignment4TivaR
             const double threeToppings = 2.15;
             const double fourToppings = 2.75;
 
-        //Constants for Soda
-        const double sodaCostYes = 2.50;
-        const double sodaCostNo = 0;
+            //Constants for Soda
+            const double sodaCostYes = 2.50;
+            const double sodaCostNo = 0;
+
+            // Constant for Discount code
+            const string discountCode = "pizzza";
 
         public Assignment4Form()
         {
@@ -45,7 +48,9 @@ namespace Assignment4TivaR
 
         private void nudSizeSelection_ValueChanged(object sender, EventArgs e)
         {
-            
+            this.txtDiscount.Enabled = false;
+            this.lblDiscountQuestion.Enabled = false;
+            this.btnEnteredTip.Enabled = false;
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -99,6 +104,72 @@ namespace Assignment4TivaR
             subtotal = (size + toppings + soda);
 
 
+            //To let the user enter the discount code.
+            this.txtDiscount.Enabled = true;
+            this.lblDiscountQuestion.Enabled = true;
+            this.btnEnteredTip.Enabled = true;
+
+
+            this.grbSize.Enabled = false;
+            this.grbToppings.Enabled = false;
+            this.grbSoda.Enabled = false;
+
+
+        }
+
+        private void nudToppingsSelection_ValueChanged(object sender, EventArgs e)
+        {
+            this.txtDiscount.Enabled = false;
+            this.lblDiscountQuestion.Enabled = false;
+            this.btnEnteredTip.Enabled = false;
+        }
+
+        private void radSodaYes_CheckedChanged(object sender, EventArgs e)
+        {
+            this.txtDiscount.Enabled = false;
+            this.lblDiscountQuestion.Enabled = false;
+            this.btnEnteredTip.Enabled = false;
+        }
+
+        private void radSodaNo_CheckedChanged(object sender, EventArgs e)
+        {
+            this.txtDiscount.Enabled = false;
+            this.lblDiscountQuestion.Enabled = false;
+            this.btnEnteredTip.Enabled = false;
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            // Enable and disable everything like it was in the beginning
+            this.txtDiscount.Enabled = false;
+            this.lblDiscountQuestion.Enabled = false;
+            this.btnEnteredTip.Enabled = false;
+
+            this.grbSize.Enabled = true;
+            this.grbToppings.Enabled = true;
+            this.grbSoda.Enabled = true;
+
+            //Set all of the Numerical counters to one 
+            this.nudSizeSelection.Value = 1;
+            this.nudToppingsSelection.Value = 1;
+            this.radSodaNo.Checked = true;
+
+
+        }
+
+        private void btnEnteredTip_Click(object sender, EventArgs e)
+        {
+            // Variables
+            string usersCode;
+
+            // Set the users code to what was entered in the text box
+            usersCode = (txtDiscount.Text);
+
+            // Is the entered code correct?
+            if (usersCode == discountCode)
+            {
+                
+            }
         }
     }
 }

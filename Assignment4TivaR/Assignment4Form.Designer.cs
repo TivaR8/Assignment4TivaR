@@ -50,9 +50,11 @@
             this.radSodaNo = new System.Windows.Forms.RadioButton();
             this.btnOrder = new System.Windows.Forms.Button();
             this.lblDiscountQuestion = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
             this.btnEnteredTip = new System.Windows.Forms.Button();
             this.lblSubtotal = new System.Windows.Forms.Label();
+            this.btnRestart = new System.Windows.Forms.Button();
+            this.lblDidUserEnterCode = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPizzaMan)).BeginInit();
             this.grbSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSizeSelection)).BeginInit();
@@ -210,6 +212,7 @@
             0,
             0,
             0});
+            this.nudToppingsSelection.ValueChanged += new System.EventHandler(this.nudToppingsSelection_ValueChanged);
             // 
             // lblTopping4
             // 
@@ -264,6 +267,7 @@
             this.radSodaYes.TabIndex = 10;
             this.radSodaYes.Text = "Yes";
             this.radSodaYes.UseVisualStyleBackColor = true;
+            this.radSodaYes.CheckedChanged += new System.EventHandler(this.radSodaYes_CheckedChanged);
             // 
             // grbSoda
             // 
@@ -288,6 +292,7 @@
             this.radSodaNo.TabStop = true;
             this.radSodaNo.Text = "No";
             this.radSodaNo.UseVisualStyleBackColor = true;
+            this.radSodaNo.CheckedChanged += new System.EventHandler(this.radSodaNo_CheckedChanged);
             // 
             // btnOrder
             // 
@@ -302,27 +307,32 @@
             // lblDiscountQuestion
             // 
             this.lblDiscountQuestion.AutoSize = true;
+            this.lblDiscountQuestion.Enabled = false;
             this.lblDiscountQuestion.Location = new System.Drawing.Point(379, 334);
             this.lblDiscountQuestion.Name = "lblDiscountQuestion";
             this.lblDiscountQuestion.Size = new System.Drawing.Size(153, 13);
             this.lblDiscountQuestion.TabIndex = 14;
             this.lblDiscountQuestion.Text = "Do you have a discount code?";
             // 
-            // textBox1
+            // txtDiscount
             // 
-            this.textBox1.Location = new System.Drawing.Point(400, 367);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 15;
+            this.txtDiscount.Enabled = false;
+            this.txtDiscount.Location = new System.Drawing.Point(400, 367);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(100, 20);
+            this.txtDiscount.TabIndex = 15;
+            this.txtDiscount.Text = "p";
             // 
             // btnEnteredTip
             // 
+            this.btnEnteredTip.Enabled = false;
             this.btnEnteredTip.Location = new System.Drawing.Point(394, 405);
             this.btnEnteredTip.Name = "btnEnteredTip";
             this.btnEnteredTip.Size = new System.Drawing.Size(114, 23);
             this.btnEnteredTip.TabIndex = 16;
             this.btnEnteredTip.Text = "Give me a Discount";
             this.btnEnteredTip.UseVisualStyleBackColor = true;
+            this.btnEnteredTip.Click += new System.EventHandler(this.btnEnteredTip_Click);
             // 
             // lblSubtotal
             // 
@@ -333,14 +343,35 @@
             this.lblSubtotal.TabIndex = 17;
             this.lblSubtotal.Text = "$";
             // 
+            // btnRestart
+            // 
+            this.btnRestart.Location = new System.Drawing.Point(67, 600);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(145, 23);
+            this.btnRestart.TabIndex = 18;
+            this.btnRestart.Text = "Restart order from scratch";
+            this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
+            // 
+            // lblDidUserEnterCode
+            // 
+            this.lblDidUserEnterCode.AutoSize = true;
+            this.lblDidUserEnterCode.Location = new System.Drawing.Point(353, 451);
+            this.lblDidUserEnterCode.Name = "lblDidUserEnterCode";
+            this.lblDidUserEnterCode.Size = new System.Drawing.Size(179, 13);
+            this.lblDidUserEnterCode.TabIndex = 19;
+            this.lblDidUserEnterCode.Text = "You will now recieve a 15% discount";
+            // 
             // Assignment4Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 692);
+            this.Controls.Add(this.lblDidUserEnterCode);
+            this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.lblSubtotal);
             this.Controls.Add(this.btnEnteredTip);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.lblDiscountQuestion);
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.grbSoda);
@@ -388,9 +419,11 @@
         private System.Windows.Forms.RadioButton radSodaNo;
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Label lblDiscountQuestion;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDiscount;
         private System.Windows.Forms.Button btnEnteredTip;
         private System.Windows.Forms.Label lblSubtotal;
+        private System.Windows.Forms.Button btnRestart;
+        private System.Windows.Forms.Label lblDidUserEnterCode;
     }
 }
 
