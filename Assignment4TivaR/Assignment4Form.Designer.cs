@@ -327,11 +327,11 @@
             // lblSubtotal
             // 
             this.lblSubtotal.AutoSize = true;
-            this.lblSubtotal.Location = new System.Drawing.Point(383, 492);
+            this.lblSubtotal.Location = new System.Drawing.Point(384, 499);
             this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(35, 13);
+            this.lblSubtotal.Size = new System.Drawing.Size(13, 13);
             this.lblSubtotal.TabIndex = 17;
-            this.lblSubtotal.Text = "label2";
+            this.lblSubtotal.Text = "$";
             // 
             // Assignment4Form
             // 
