@@ -37,21 +37,26 @@
             this.lblCostOfSmall = new System.Windows.Forms.Label();
             this.lblCostofXLarge = new System.Windows.Forms.Label();
             this.grbSize = new System.Windows.Forms.GroupBox();
+            this.nudSizeSelection = new System.Windows.Forms.NumericUpDown();
             this.grbToppings = new System.Windows.Forms.GroupBox();
+            this.nudToppingsSelection = new System.Windows.Forms.NumericUpDown();
+            this.lblTopping4 = new System.Windows.Forms.Label();
             this.lblTopping3 = new System.Windows.Forms.Label();
             this.lblTopping1 = new System.Windows.Forms.Label();
             this.lblTopping2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblTopping4 = new System.Windows.Forms.Label();
-            this.nudSizeSelection = new System.Windows.Forms.NumericUpDown();
-            this.nudToppingsSelection = new System.Windows.Forms.NumericUpDown();
             this.radSodaYes = new System.Windows.Forms.RadioButton();
             this.grbSoda = new System.Windows.Forms.GroupBox();
             this.radSodaNo = new System.Windows.Forms.RadioButton();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.lblDiscountQuestion = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnEnteredTip = new System.Windows.Forms.Button();
+            this.lblSubtotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPizzaMan)).BeginInit();
             this.grbSize.SuspendLayout();
-            this.grbToppings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSizeSelection)).BeginInit();
+            this.grbToppings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudToppingsSelection)).BeginInit();
             this.grbSoda.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +73,7 @@
             // picPizzaMan
             // 
             this.picPizzaMan.Image = global::Assignment4TivaR.Properties.Resources.Earth;
-            this.picPizzaMan.Location = new System.Drawing.Point(437, 81);
+            this.picPizzaMan.Location = new System.Drawing.Point(386, 81);
             this.picPizzaMan.Name = "picPizzaMan";
             this.picPizzaMan.Size = new System.Drawing.Size(146, 226);
             this.picPizzaMan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,6 +148,30 @@
             this.grbSize.TabStop = false;
             this.grbSize.Text = "Size";
             // 
+            // nudSizeSelection
+            // 
+            this.nudSizeSelection.Location = new System.Drawing.Point(194, 53);
+            this.nudSizeSelection.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.nudSizeSelection.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudSizeSelection.Name = "nudSizeSelection";
+            this.nudSizeSelection.ReadOnly = true;
+            this.nudSizeSelection.Size = new System.Drawing.Size(38, 20);
+            this.nudSizeSelection.TabIndex = 8;
+            this.nudSizeSelection.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudSizeSelection.ValueChanged += new System.EventHandler(this.nudSizeSelection_ValueChanged);
+            // 
             // grbToppings
             // 
             this.grbToppings.Controls.Add(this.nudToppingsSelection);
@@ -158,6 +187,38 @@
             this.grbToppings.TabIndex = 9;
             this.grbToppings.TabStop = false;
             this.grbToppings.Text = "Toppings";
+            // 
+            // nudToppingsSelection
+            // 
+            this.nudToppingsSelection.Location = new System.Drawing.Point(194, 51);
+            this.nudToppingsSelection.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.nudToppingsSelection.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudToppingsSelection.Name = "nudToppingsSelection";
+            this.nudToppingsSelection.ReadOnly = true;
+            this.nudToppingsSelection.Size = new System.Drawing.Size(38, 20);
+            this.nudToppingsSelection.TabIndex = 9;
+            this.nudToppingsSelection.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblTopping4
+            // 
+            this.lblTopping4.AutoSize = true;
+            this.lblTopping4.Location = new System.Drawing.Point(6, 116);
+            this.lblTopping4.Name = "lblTopping4";
+            this.lblTopping4.Size = new System.Drawing.Size(96, 13);
+            this.lblTopping4.TabIndex = 8;
+            this.lblTopping4.Text = "4 Toppings ($2.75)";
             // 
             // lblTopping3
             // 
@@ -194,59 +255,6 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 3;
             // 
-            // lblTopping4
-            // 
-            this.lblTopping4.AutoSize = true;
-            this.lblTopping4.Location = new System.Drawing.Point(6, 116);
-            this.lblTopping4.Name = "lblTopping4";
-            this.lblTopping4.Size = new System.Drawing.Size(96, 13);
-            this.lblTopping4.TabIndex = 8;
-            this.lblTopping4.Text = "4 Toppings ($2.75)";
-            // 
-            // nudSizeSelection
-            // 
-            this.nudSizeSelection.Location = new System.Drawing.Point(194, 53);
-            this.nudSizeSelection.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.nudSizeSelection.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudSizeSelection.Name = "nudSizeSelection";
-            this.nudSizeSelection.Size = new System.Drawing.Size(38, 20);
-            this.nudSizeSelection.TabIndex = 8;
-            this.nudSizeSelection.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // nudToppingsSelection
-            // 
-            this.nudToppingsSelection.Location = new System.Drawing.Point(194, 51);
-            this.nudToppingsSelection.Maximum = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
-            this.nudToppingsSelection.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudToppingsSelection.Name = "nudToppingsSelection";
-            this.nudToppingsSelection.Size = new System.Drawing.Size(38, 20);
-            this.nudToppingsSelection.TabIndex = 9;
-            this.nudToppingsSelection.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // radSodaYes
             // 
             this.radSodaYes.AutoSize = true;
@@ -254,7 +262,6 @@
             this.radSodaYes.Name = "radSodaYes";
             this.radSodaYes.Size = new System.Drawing.Size(43, 17);
             this.radSodaYes.TabIndex = 10;
-            this.radSodaYes.TabStop = true;
             this.radSodaYes.Text = "Yes";
             this.radSodaYes.UseVisualStyleBackColor = true;
             // 
@@ -273,6 +280,7 @@
             // radSodaNo
             // 
             this.radSodaNo.AutoSize = true;
+            this.radSodaNo.Checked = true;
             this.radSodaNo.Location = new System.Drawing.Point(123, 56);
             this.radSodaNo.Name = "radSodaNo";
             this.radSodaNo.Size = new System.Drawing.Size(39, 17);
@@ -281,11 +289,60 @@
             this.radSodaNo.Text = "No";
             this.radSodaNo.UseVisualStyleBackColor = true;
             // 
+            // btnOrder
+            // 
+            this.btnOrder.Location = new System.Drawing.Point(96, 517);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(85, 23);
+            this.btnOrder.TabIndex = 12;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
+            // lblDiscountQuestion
+            // 
+            this.lblDiscountQuestion.AutoSize = true;
+            this.lblDiscountQuestion.Location = new System.Drawing.Point(379, 334);
+            this.lblDiscountQuestion.Name = "lblDiscountQuestion";
+            this.lblDiscountQuestion.Size = new System.Drawing.Size(153, 13);
+            this.lblDiscountQuestion.TabIndex = 14;
+            this.lblDiscountQuestion.Text = "Do you have a discount code?";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(400, 367);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 15;
+            // 
+            // btnEnteredTip
+            // 
+            this.btnEnteredTip.Location = new System.Drawing.Point(394, 405);
+            this.btnEnteredTip.Name = "btnEnteredTip";
+            this.btnEnteredTip.Size = new System.Drawing.Size(114, 23);
+            this.btnEnteredTip.TabIndex = 16;
+            this.btnEnteredTip.Text = "Give me a Discount";
+            this.btnEnteredTip.UseVisualStyleBackColor = true;
+            // 
+            // lblSubtotal
+            // 
+            this.lblSubtotal.AutoSize = true;
+            this.lblSubtotal.Location = new System.Drawing.Point(383, 492);
+            this.lblSubtotal.Name = "lblSubtotal";
+            this.lblSubtotal.Size = new System.Drawing.Size(35, 13);
+            this.lblSubtotal.TabIndex = 17;
+            this.lblSubtotal.Text = "label2";
+            // 
             // Assignment4Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 625);
+            this.ClientSize = new System.Drawing.Size(595, 692);
+            this.Controls.Add(this.lblSubtotal);
+            this.Controls.Add(this.btnEnteredTip);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblDiscountQuestion);
+            this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.grbSoda);
             this.Controls.Add(this.grbToppings);
             this.Controls.Add(this.grbSize);
@@ -296,9 +353,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPizzaMan)).EndInit();
             this.grbSize.ResumeLayout(false);
             this.grbSize.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSizeSelection)).EndInit();
             this.grbToppings.ResumeLayout(false);
             this.grbToppings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSizeSelection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudToppingsSelection)).EndInit();
             this.grbSoda.ResumeLayout(false);
             this.grbSoda.PerformLayout();
@@ -329,6 +386,11 @@
         private System.Windows.Forms.RadioButton radSodaYes;
         private System.Windows.Forms.GroupBox grbSoda;
         private System.Windows.Forms.RadioButton radSodaNo;
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Label lblDiscountQuestion;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnEnteredTip;
+        private System.Windows.Forms.Label lblSubtotal;
     }
 }
 
