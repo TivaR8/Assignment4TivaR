@@ -44,18 +44,30 @@ namespace Assignment4TivaR
         public Assignment4Form()
         {
             InitializeComponent();
+
+            // Hide the Final cost items
+            this.lblHST.Hide();
+            this.lblSubtotal.Hide();
+            this.lblTotalCost.Show();
+            
         }
 
         private void nudSizeSelection_ValueChanged(object sender, EventArgs e)
         {
+            //To disable the second phase of things
             this.txtDiscount.Enabled = false;
             this.lblDiscountQuestion.Enabled = false;
+
+            // Hide the Final cost items
+            this.lblHST.Hide();
+            this.lblSubtotal.Hide();
+            this.lblTotalCost.Show();
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
             // To set a variable to hold all of the Selections
-            double size, toppings, subtotal, soda;
+            double size, toppings, subtotal, soda, totalCost;
 
             // To determine what size the user wants
             if (nudSizeSelection.Value == 1)
@@ -103,7 +115,7 @@ namespace Assignment4TivaR
             subtotal = (size + toppings + soda);
 
             // Display subtotal
-            lblSubtotal.Text = ("$"+subtotal);
+            lblSubtotal.Text = ("Subtotal = $"+subtotal);
 
             // To let the user enter the discount code.
             this.txtDiscount.Enabled = true;
@@ -117,12 +129,12 @@ namespace Assignment4TivaR
             //This section is what I call...
             //...phase two
             // It will handle all of the discount stuff
+            //***********************************************************************************
 
             // This shows new text on the discount option
             btnOrder.Text = ("Enter discount code");
             // Variables
             string usersCode;
-            double discountTotal;
 
             // Set the users code to what was entered in the text box
             usersCode = (txtDiscount.Text);
@@ -132,6 +144,18 @@ namespace Assignment4TivaR
             {
                 subtotal = (subtotal - (subtotal * 0.15));
             }
+                //To calculate final total cost
+            totalCost = subtotal * HST;
+
+            // To Set all of the labels to the correct amount
+            lblSubtotal.Text = ("Subtotal = $" + subtotal);
+            lblTotalCost.Text = ("Total Cost = $" + totalCost);
+            lblHST.Text = ("HST is " + HST + "%");
+
+            //To display final cost subtotal and everything
+            this.lblTotalCost.Show();
+            this.lblSubtotal.Show();
+            this.lblHST.Show();
 
 
         }
@@ -168,6 +192,11 @@ namespace Assignment4TivaR
             this.nudSizeSelection.Value = 1;
             this.nudToppingsSelection.Value = 1;
             this.radSodaNo.Checked = true;
+
+            //SHide all of the Costs 
+            this.lblHST.Hide();
+            this.lblSubtotal.Hide();
+            this.lblTotalCost.Hide();
 
 
         }
