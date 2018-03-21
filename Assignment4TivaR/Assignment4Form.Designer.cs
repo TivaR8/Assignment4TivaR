@@ -51,10 +51,11 @@
             this.btnOrder = new System.Windows.Forms.Button();
             this.lblDiscountQuestion = new System.Windows.Forms.Label();
             this.txtDiscount = new System.Windows.Forms.TextBox();
-            this.btnEnteredTip = new System.Windows.Forms.Button();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.btnRestart = new System.Windows.Forms.Button();
             this.lblDidUserEnterCode = new System.Windows.Forms.Label();
+            this.lblTotalCost = new System.Windows.Forms.Label();
+            this.lblHST = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPizzaMan)).BeginInit();
             this.grbSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSizeSelection)).BeginInit();
@@ -323,21 +324,10 @@
             this.txtDiscount.TabIndex = 15;
             this.txtDiscount.Text = "p";
             // 
-            // btnEnteredTip
-            // 
-            this.btnEnteredTip.Enabled = false;
-            this.btnEnteredTip.Location = new System.Drawing.Point(394, 405);
-            this.btnEnteredTip.Name = "btnEnteredTip";
-            this.btnEnteredTip.Size = new System.Drawing.Size(114, 23);
-            this.btnEnteredTip.TabIndex = 16;
-            this.btnEnteredTip.Text = "Give me a Discount";
-            this.btnEnteredTip.UseVisualStyleBackColor = true;
-            this.btnEnteredTip.Click += new System.EventHandler(this.btnEnteredTip_Click);
-            // 
             // lblSubtotal
             // 
             this.lblSubtotal.AutoSize = true;
-            this.lblSubtotal.Location = new System.Drawing.Point(384, 499);
+            this.lblSubtotal.Location = new System.Drawing.Point(383, 478);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(13, 13);
             this.lblSubtotal.TabIndex = 17;
@@ -356,21 +346,40 @@
             // lblDidUserEnterCode
             // 
             this.lblDidUserEnterCode.AutoSize = true;
-            this.lblDidUserEnterCode.Location = new System.Drawing.Point(353, 451);
+            this.lblDidUserEnterCode.Location = new System.Drawing.Point(353, 403);
             this.lblDidUserEnterCode.Name = "lblDidUserEnterCode";
             this.lblDidUserEnterCode.Size = new System.Drawing.Size(179, 13);
             this.lblDidUserEnterCode.TabIndex = 19;
             this.lblDidUserEnterCode.Text = "You will now recieve a 15% discount";
+            // 
+            // lblTotalCost
+            // 
+            this.lblTotalCost.AutoSize = true;
+            this.lblTotalCost.Location = new System.Drawing.Point(383, 503);
+            this.lblTotalCost.Name = "lblTotalCost";
+            this.lblTotalCost.Size = new System.Drawing.Size(35, 13);
+            this.lblTotalCost.TabIndex = 20;
+            this.lblTotalCost.Text = "label2";
+            // 
+            // lblHST
+            // 
+            this.lblHST.AutoSize = true;
+            this.lblHST.Location = new System.Drawing.Point(383, 527);
+            this.lblHST.Name = "lblHST";
+            this.lblHST.Size = new System.Drawing.Size(35, 13);
+            this.lblHST.TabIndex = 21;
+            this.lblHST.Text = "label2";
             // 
             // Assignment4Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 692);
+            this.Controls.Add(this.lblHST);
+            this.Controls.Add(this.lblTotalCost);
             this.Controls.Add(this.lblDidUserEnterCode);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.lblSubtotal);
-            this.Controls.Add(this.btnEnteredTip);
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.lblDiscountQuestion);
             this.Controls.Add(this.btnOrder);
@@ -420,10 +429,11 @@
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Label lblDiscountQuestion;
         private System.Windows.Forms.TextBox txtDiscount;
-        private System.Windows.Forms.Button btnEnteredTip;
         private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.Button btnRestart;
         private System.Windows.Forms.Label lblDidUserEnterCode;
+        private System.Windows.Forms.Label lblTotalCost;
+        private System.Windows.Forms.Label lblHST;
     }
 }
 

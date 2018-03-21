@@ -50,7 +50,6 @@ namespace Assignment4TivaR
         {
             this.txtDiscount.Enabled = false;
             this.lblDiscountQuestion.Enabled = false;
-            this.btnEnteredTip.Enabled = false;
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -103,16 +102,36 @@ namespace Assignment4TivaR
             // The Calculation of the Subtotal
             subtotal = (size + toppings + soda);
 
+            // Display subtotal
+            lblSubtotal.Text = ("$"+subtotal);
 
-            //To let the user enter the discount code.
+            // To let the user enter the discount code.
             this.txtDiscount.Enabled = true;
             this.lblDiscountQuestion.Enabled = true;
-            this.btnEnteredTip.Enabled = true;
 
 
             this.grbSize.Enabled = false;
             this.grbToppings.Enabled = false;
             this.grbSoda.Enabled = false;
+
+            //This section is what I call...
+            //...phase two
+            // It will handle all of the discount stuff
+
+            // This shows new text on the discount option
+            btnOrder.Text = ("Enter discount code");
+            // Variables
+            string usersCode;
+            double discountTotal;
+
+            // Set the users code to what was entered in the text box
+            usersCode = (txtDiscount.Text);
+
+            // Is the entered code correct?
+            if (usersCode == discountCode)
+            {
+                subtotal = (subtotal - (subtotal * 0.15));
+            }
 
 
         }
@@ -121,21 +140,18 @@ namespace Assignment4TivaR
         {
             this.txtDiscount.Enabled = false;
             this.lblDiscountQuestion.Enabled = false;
-            this.btnEnteredTip.Enabled = false;
         }
 
         private void radSodaYes_CheckedChanged(object sender, EventArgs e)
         {
             this.txtDiscount.Enabled = false;
             this.lblDiscountQuestion.Enabled = false;
-            this.btnEnteredTip.Enabled = false;
         }
 
         private void radSodaNo_CheckedChanged(object sender, EventArgs e)
         {
             this.txtDiscount.Enabled = false;
             this.lblDiscountQuestion.Enabled = false;
-            this.btnEnteredTip.Enabled = false;
         }
 
         private void btnRestart_Click(object sender, EventArgs e)
@@ -143,7 +159,6 @@ namespace Assignment4TivaR
             // Enable and disable everything like it was in the beginning
             this.txtDiscount.Enabled = false;
             this.lblDiscountQuestion.Enabled = false;
-            this.btnEnteredTip.Enabled = false;
 
             this.grbSize.Enabled = true;
             this.grbToppings.Enabled = true;
@@ -157,19 +172,6 @@ namespace Assignment4TivaR
 
         }
 
-        private void btnEnteredTip_Click(object sender, EventArgs e)
-        {
-            // Variables
-            string usersCode;
 
-            // Set the users code to what was entered in the text box
-            usersCode = (txtDiscount.Text);
-
-            // Is the entered code correct?
-            if (usersCode == discountCode)
-            {
-                
-            }
-        }
     }
 }
