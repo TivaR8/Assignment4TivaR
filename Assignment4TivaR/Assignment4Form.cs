@@ -48,8 +48,9 @@ namespace Assignment4TivaR
             // Hide the Final cost items
             this.lblHST.Hide();
             this.lblSubtotal.Hide();
-            this.lblTotalCost.Show();
-            
+            this.lblTotalCost.Hide();
+            lblDidUserEnterCode.Text = "Please enter a VALID Code";
+
         }
 
         private void nudSizeSelection_ValueChanged(object sender, EventArgs e)
@@ -61,13 +62,13 @@ namespace Assignment4TivaR
             // Hide the Final cost items
             this.lblHST.Hide();
             this.lblSubtotal.Hide();
-            this.lblTotalCost.Show();
+            this.lblTotalCost.Hide();
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
             // To set a variable to hold all of the Selections
-            double size, toppings, subtotal, soda, totalCost;
+            double size, toppings, subtotal, soda, totalCost,HSTCost;
 
             // To determine what size the user wants
             if (nudSizeSelection.Value == 1)
@@ -104,18 +105,18 @@ namespace Assignment4TivaR
             // To determine if user selected a soda
             if (radSodaNo.Checked == true)
             {
-                soda = sodaCostYes;
+                soda = sodaCostNo;
             }
             else
             {
-                soda = sodaCostNo;
+                soda = sodaCostYes;
             }
 
             // The Calculation of the Subtotal
             subtotal = (size + toppings + soda);
 
             // Display subtotal
-            lblSubtotal.Text = ("Subtotal = $"+subtotal);
+            lblSubtotal.Text = "Subtotal = " + String.Format("${0:0.00}", subtotal);
 
             // To let the user enter the discount code.
             this.txtDiscount.Enabled = true;
@@ -141,16 +142,26 @@ namespace Assignment4TivaR
 
             // Is the entered code correct?
             if (usersCode == discountCode)
-            {
+            { 
                 subtotal = (subtotal - (subtotal * 0.15));
+
+                // Text to tell user they got the correct code
+                lblDidUserEnterCode.Text = "You will now receive a discount on your pizza!";
             }
-                //To calculate final total cost
-            totalCost = subtotal * HST;
+            else
+            {
+                lblDidUserEnterCode.Text = "Please enter a VALID Code";
+            }
+
+            //To calculate final total cost
+            HSTCost = subtotal * HST;
+            totalCost = subtotal + HSTCost;
+
 
             // To Set all of the labels to the correct amount
-            lblSubtotal.Text = ("Subtotal = $" + subtotal);
-            lblTotalCost.Text = ("Total Cost = $" + totalCost);
-            lblHST.Text = ("HST is " + HST + "%");
+            lblSubtotal.Text = "Subtotal = " + String.Format("${0:0.00}", subtotal);
+            lblTotalCost.Text = "Total Cost = " + String.Format("${0:0.00}", totalCost);
+            lblHST.Text = ("HST is 13%");
 
             //To display final cost subtotal and everything
             this.lblTotalCost.Show();
@@ -197,6 +208,12 @@ namespace Assignment4TivaR
             this.lblHST.Hide();
             this.lblSubtotal.Hide();
             this.lblTotalCost.Hide();
+
+            //Set the text to recieve the discount
+            lblDidUserEnterCode.Text = "Please enter a VALID Code";
+
+            //To set the discount code to nothing again
+            txtDiscount.Text = "";
 
 
         }

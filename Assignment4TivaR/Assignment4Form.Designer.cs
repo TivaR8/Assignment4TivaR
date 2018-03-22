@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblIntroQ = new System.Windows.Forms.Label();
-            this.picPizzaMan = new System.Windows.Forms.PictureBox();
             this.lblSizeQuestion = new System.Windows.Forms.Label();
             this.lblToppingsQuestion = new System.Windows.Forms.Label();
             this.lblSodaQuestion = new System.Windows.Forms.Label();
@@ -56,12 +55,13 @@
             this.lblDidUserEnterCode = new System.Windows.Forms.Label();
             this.lblTotalCost = new System.Windows.Forms.Label();
             this.lblHST = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picPizzaMan)).BeginInit();
+            this.picPizzaMan = new System.Windows.Forms.PictureBox();
             this.grbSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSizeSelection)).BeginInit();
             this.grbToppings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudToppingsSelection)).BeginInit();
             this.grbSoda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPizzaMan)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIntroQ
@@ -72,16 +72,6 @@
             this.lblIntroQ.Size = new System.Drawing.Size(262, 13);
             this.lblIntroQ.TabIndex = 0;
             this.lblIntroQ.Text = "Hello welcome to the Pizza Place. What is your order?";
-            // 
-            // picPizzaMan
-            // 
-            this.picPizzaMan.Image = global::Assignment4TivaR.Properties.Resources.Earth;
-            this.picPizzaMan.Location = new System.Drawing.Point(386, 81);
-            this.picPizzaMan.Name = "picPizzaMan";
-            this.picPizzaMan.Size = new System.Drawing.Size(146, 226);
-            this.picPizzaMan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPizzaMan.TabIndex = 1;
-            this.picPizzaMan.TabStop = false;
             // 
             // lblSizeQuestion
             // 
@@ -322,7 +312,6 @@
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(100, 20);
             this.txtDiscount.TabIndex = 15;
-            this.txtDiscount.Text = "p";
             // 
             // lblSubtotal
             // 
@@ -366,9 +355,19 @@
             this.lblHST.AutoSize = true;
             this.lblHST.Location = new System.Drawing.Point(383, 527);
             this.lblHST.Name = "lblHST";
-            this.lblHST.Size = new System.Drawing.Size(35, 13);
+            this.lblHST.Size = new System.Drawing.Size(84, 13);
             this.lblHST.TabIndex = 21;
-            this.lblHST.Text = "label2";
+            this.lblHST.Text = "The HST is 13%";
+            // 
+            // picPizzaMan
+            // 
+            this.picPizzaMan.Image = global::Assignment4TivaR.Properties.Resources._1494533;
+            this.picPizzaMan.Location = new System.Drawing.Point(323, 81);
+            this.picPizzaMan.Name = "picPizzaMan";
+            this.picPizzaMan.Size = new System.Drawing.Size(209, 226);
+            this.picPizzaMan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPizzaMan.TabIndex = 1;
+            this.picPizzaMan.TabStop = false;
             // 
             // Assignment4Form
             // 
@@ -390,7 +389,6 @@
             this.Controls.Add(this.lblIntroQ);
             this.Name = "Assignment4Form";
             this.Text = "Assignment #4 By Tiva Rait";
-            ((System.ComponentModel.ISupportInitialize)(this.picPizzaMan)).EndInit();
             this.grbSize.ResumeLayout(false);
             this.grbSize.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSizeSelection)).EndInit();
@@ -399,6 +397,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudToppingsSelection)).EndInit();
             this.grbSoda.ResumeLayout(false);
             this.grbSoda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPizzaMan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
